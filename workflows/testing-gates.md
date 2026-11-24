@@ -2,17 +2,17 @@
 
 合并回 `main` 必须同时过三道门，缺一不可：
 
-## 门 1：开发自测
+## 门 1：开发自测与回归
 
-开发 Agent 按 SPEC 第 8 节测试计划自跑，命令与输出留痕在 PR 描述中。跑不通不许提 PR。
+开发 Agent 须同时跑通三项：① SPEC 第 8 节测试计划；② 项目既有测试套件（防改新坏旧）；③ Lint / 类型检查与密钥扫描。脱敏后的命令与输出留痕在 PR 描述中（L1 纯本地项目写回 SPEC 文末）。任一项不过，不许进入门 2。
 
 ## 门 2：独立验证
 
-测试 Agent 按 SPEC 第 7 节验收标准逐条验证（规程见 `agents/test-agent.md`），结论与证据写入 SPEC 文末。未到 verified 状态的 SPEC 不许合并。
+测试 Agent 在干净上下文中，基于功能分支的指定 commit SHA，按 SPEC 第 7 节验收标准逐条验证（规程见 `agents/test-agent.md`），把 SHA、结论与脱敏证据交付到 PR 描述（L1 写 SPEC 文末）。此后功能分支有新代码提交或 rebase 了 `main`，原 verified 自动失效，须重跑门 2；未持有效 verified 不许合并。SPEC 的 verified / done 状态由收尾人在合并后的 docs 提交中落位，不在功能分支上改 SPEC。
 
 ## 门 3：审查
 
-审查 Agent 过 `agents/reviewer-agent.md` 的检查清单，重点是一致性与密钥安全。审查记录留在 PR 中。
+审查 Agent 过 `agents/reviewer-agent.md` 的检查清单，重点是一致性、代码安全与密钥安全。审查记录留在 PR 中（L1 写 SPEC 文末）。
 
 ## 无自动化测试的项目
 

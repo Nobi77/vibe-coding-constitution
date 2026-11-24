@@ -4,7 +4,7 @@
 
 | 能力名 | 用途 | 存放位置 | 调用方式 | 验证状态 |
 |---|---|---|---|---|
-| Vibe Coding 约束体系 | 约束全部 AI 编程工作：文档分离、SPEC 驱动、多 Agent 分工、Git 门禁 | 本仓 `CONSTITUTION.md` | 读宪法＋按角色读 `agents/`；新账号用 `prompts/bootstrap-prompt.md` 启动 | 已建立（v1.0） |
+| Vibe Coding 约束体系 | 约束全部 AI 编程工作：文档分离、SPEC 驱动、多 Agent 分工、Git 门禁 | 本仓 `CONSTITUTION.md` | 读宪法＋按角色读 `agents/`；新账号用 `prompts/bootstrap-prompt.md` 启动 | 已实测（2026-11-24，证据：本仓已推送 GitHub 并回读验证 24 个文件齐全；外部审核记录见 `notes/`） |
 
 ## 登记格式（新增能力照此填）
 
